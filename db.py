@@ -16,9 +16,10 @@ def get_data():
         # 创建游标对象
 
         curser = con.cursor()
-        curser.execute("select * from student")
-        res = curser.fetchall()
-        print(type(res), res)
+        # curser.execute("select * from student")
+        curser.execute("INSERT INTO `db_python`.`student` (`numeber`, `age`) VALUES ('11', 55)")
+        # res = curser.fetchall()
+        # print(type(res), res[0])
     except Exception as e:
         print("异常：", e)
     finally:
